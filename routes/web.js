@@ -12,12 +12,12 @@ module.exports = (app) => {
 
   // Retrieve main page
   router.get("/", limiter, (req, res) => {
-    res.sendFile('./public/home.html', { root: path.join(__dirname, '..') });
+    res.sendFile('index.html', { root: path.join(__dirname, '..', 'public') });
   });
 
   // GET /highscores
   router.get("/highscores", limiter, (req, res) => {
-    res.sendFile('./public/highscores.html', { root: path.join(__dirname, '..') });
+    res.sendFile('highscores.html', { root: path.join(__dirname, '..', 'public') });
   });
   
   // Register routes
