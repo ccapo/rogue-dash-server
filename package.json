@@ -1,0 +1,34 @@
+{
+  "name": "rogue-dash-server",
+  "version": "1.0.0",
+  "description": "Webserver for rogue-dash game",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "setup": "node scripts/setup.js",
+    "test": "snyk test"
+  },
+  "keywords": [
+    "rogue-like",
+    "web-server",
+    "high-score"
+  ],
+  "author": "Chris Capobianco",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "2.8.5",
+    "express": "4.17.1",
+    "express-rate-limit": "5.2.3",
+    "helmet": "4.4.1",
+    "jsonwebtoken": "8.5.1",
+    "morgan": "1.10.0",
+    "rotating-file-stream": "2.1.4",
+    "sequelize": "6.5.0",
+    "sqlite3": "4.1.0",
+    "unique-names-generator": "4.3.1",
+    "uuid": "8.3.2"
+  },
+  "devDependencies": {
+    "snyk": "1.439.1"
+  }
+}

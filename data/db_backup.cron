@@ -1,0 +1,6 @@
+#!/bin/bash
+
+sqlite3 rogue-dash.db <<EOF
+.timeout 20000
+.backup rogue-dash_$(date +%Y-%m-%d).db
+EOF
