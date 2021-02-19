@@ -8,8 +8,7 @@ module.exports = (app, db) => {
   const jwt = require('jsonwebtoken');
   const rateLimit = require("express-rate-limit");
   const router = require("express").Router();
-  const { validate: uuidValidate } = require('uuid');
-  const { generateToken, randomName, computeScore, hashPassword, authenticateJWT } = require(path.join(__dirname, '..', 'lib', 'helper.js'))(db);
+  const { uuidv4, generateToken, randomName, computeScore, hashPassword, authenticateJWT } = require(path.join(__dirname, '..', 'lib', 'helper.js'))(db);
 
   // Confiure rate limiter
   const limiter = rateLimit({
