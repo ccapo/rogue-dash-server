@@ -1,3 +1,5 @@
+const env = process.env.NODE_ENV || "dev";
+
 const config = {
   dev: {
     db: {
@@ -40,5 +42,28 @@ const config = {
     }
   }
 };
+
+// Validate config
+if (!process.env.PASS_KEY) {
+  console.log("Missing PASS_KEY environment variable");
+  process.exit(2);
+}
+
+if (!process.env.JWT_KEY) {
+  console.log("Missing JWT_KEY environment variable");
+  process.exit(2);
+}
+
+if (env === "prod") {
+  if (!process.env.DB_USER) {
+    console.log("Missing DB_USER environment variable in prod environment");
+    process.exit(2);
+  }
+  
+  if (!process.env.DB_PASS) {
+    console.log("Missing DB_PASS environment variable in prod environment");
+    process.exit(2);
+  }
+}
 
 module.exports = config;
