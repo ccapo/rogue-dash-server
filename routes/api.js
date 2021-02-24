@@ -107,10 +107,10 @@ module.exports = (app, db) => {
           const userHistory = {
             uuid: user.uuid,
             name: user.name,
-            score: user.score
+            score: score
           };
           db.user_history.create(userHistory).then(user => {
-            res.json({name: user.name, score: user.score});
+            res.json({name: user.name, score: score});
           }).catch(err => {
             console.log(`Create User History: ${err.message}`);
             res.status(500).send({
