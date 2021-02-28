@@ -96,9 +96,8 @@ module.exports = (app, db) => {
   // Retrieve all user scores
   router.post("/score", authenticateJWT, (req, res) => {
     const body = req.body || {};
-    const moves = body.moves || [];
-    if (Array.isArray(moves)) {
-      const score = computeScore(moves);
+    if (typeof(body) === "object") {
+      const score = computeScore(body);
       db.user.update({score: score}, {
         where: { uuid: req.user.uuid }
       }).then(updated => {
