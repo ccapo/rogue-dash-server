@@ -5,7 +5,7 @@ const env = process.env.NODE_ENV || "dev";
 const config = {
   dev: {
     db: {
-      username: "root",
+      username: "",
       password: "",
       database: "rogue-dash",
       host: "localhost",
