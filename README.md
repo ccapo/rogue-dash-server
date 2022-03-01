@@ -11,4 +11,4 @@
 * `cd rogue-dash-server`
 * `npm install`
 * `npm install -g pm2`
-* `sudo apt install nginx`
+* `sudo apt install nginx build-essential make`
