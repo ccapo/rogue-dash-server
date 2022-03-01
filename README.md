@@ -13,4 +13,4 @@
 * `git clone https://github.com/ccapo/rogue-dash-server.git`
 * `cd rogue-dash-server`
 * `npm install`
-* 
+* `npm audit fix`
