@@ -17,3 +17,8 @@ npm install
 npm audit fix
 npm run setup
 ```
+Then
+```
+Get public IPv4 address for server
+Create/update A record in Zone Editor
+```
