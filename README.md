@@ -45,8 +45,9 @@ pm2 start index.js
 ```
 cd ~/rogue-dash-server
 sudo cp config/rogue-dash-server.conf /etc/nginx/sites-available
-sudo rm /etc/nginx/sites-enabled/default
-sudo ln -s /etc/nginx/sites-available/rogue-dash-server.conf /etc/nginx/sites-enabled/rogue-dash-server.conf
+cd /etc/nginx/sites-enabled
+sudo rm default
+sudo ln -s /etc/nginx/sites-available/rogue-dash-server.conf .
 sudo nginx -s reload
 ```
 * Run certbot
