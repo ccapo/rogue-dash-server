@@ -24,12 +24,12 @@
     "jsonwebtoken": "8.5.1",
     "morgan": "1.10.0",
     "rotating-file-stream": "2.1.4",
-    "sequelize": "6.5.0",
+    "sequelize": "6.17.0",
     "sqlite3": "4.1.0",
     "unique-names-generator": "4.3.1",
     "uuid": "8.3.2"
   },
   "devDependencies": {
-    "snyk": "1.439.1"
+    "snyk": "1.859.0"
   }
 }
