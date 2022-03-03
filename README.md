@@ -40,6 +40,9 @@ npm audit fix
 cd ~/rogue-dash-server
 npm run setup
 pm2 start index.js
+pm2 save
+pm2 startup
+# Execute generated command to create a pm2 daemon
 ```
 * Configure nginx
 ```
